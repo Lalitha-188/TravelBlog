@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color:lightblue;
+  padding: 0.6rem;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+header ul {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li{
+  list-style: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+nav li .nav-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  white-space: nowrap;   /* Prevents text from wrapping */    /* Prevents overflow */
+  font-family: 'Poppins', sans-serif; /* or 'Montserrat', sans-serif */
+}
+
+li a{
+  color: black;
+  transition: all 0.3s;
+  padding:5px 10px;
+  border-radius: 10px;
+}
+
+li a:hover{
+  color:black;
+}
+
+li .login{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header h2{
+  margin-left: 1rem;
+}
+
+section{
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.bg svg{
+  position: absolute;
+  bottom: 0;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3.5rem;
+  padding: 2rem;
+}
+
+
+
+.card {
+  flex: 0 0 calc(25% - 2rem);  /* ✅ 4 cards per row minus gap */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 8px;
+  background-color: azure;
+  padding: 2rem;
+  box-sizing: border-box;      /* ✅ Makes width include padding */
+}
+
+
+.card-body{
+  background-color:lightblue;
+  padding: 1rem;
+}
+
+.card-body .title{
+  margin-bottom:8px;
+  font-size: 20px;
+  font-weight:600;
+}
+
+.card-body .icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body .days{
+  display: flex;
+  align-items: center;
+  gap:7px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.action{
+  display: flex;
+  font-size: 19px;
+  justify-content: space-between;
+  align-items: center;
+  width: 45px;
+}
+
+.editIcon{
+  color: black;
+  font-size: 18px;
+}
+
+.action a:hover{
+  color: black;
+}
+
+.deleteIcon{
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  /* background-color removed */
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background:none;
+}
+
+
+.form-header{
+  background-color: #d4f6e8;
+  height: 3px;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-control label {
+  background-color: #f0f0f0;
+  padding: 2px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+
+.form-control .input{
+  flex-basis: 70%;
+  border:3px solid rgb(156 163 175);
+  border-radius: 5px;
+  height: 30px;
+  padding: 2px;
+}
+
+.form-control .input-textarea{
+  border: 3px solid rgb(156 163 175);
+  border-radius: 7px;
+  flex-basis: 70%;
+  padding: 3px;
+}
+
+.submit-button{
+  margin:2rem 0;
+  border:none;
+  background-color:lightblue;
+  font-size: 18px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form p{
+  cursor: pointer;
+  display: inline;
+  border-bottom: 1px solid #307bbd;
+  color:rga(4,136,170);
+  font-size: 14px;
+  color: #307bbd;
+}
+
+.form .error{
+  color:red;
+  font-size: 13px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.add-recipe{
+  width: 100%;
+}
+
+.recipe{
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer{
+  width:100vw;
+  height: 30px;
+  color:#213547;
+  background-color:white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.outer-container{
+  width: 70%;
+  margin: 5rem auto;
+}
+
+.outer-container .profile{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+}
+
+.outer-container .title{
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.outer-container .recipe-details{
+  display: flex;
+  gap: 3rem;
+  align-items: justify;
+  margin-top: 1rem;
+}
+
+.active{
+  color:black !important;
+  background-color: #d4f6e8;
+}
+.nav-link {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link.active {
+  background-color: #d4f6e8;
+  font-weight: bold;
+}
+.add-description-page {
+  background-image: url('travel.jpg'); /* ✅ adjust path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* make it fill the screen */
+  padding: 2rem;
+  opacity: calc();
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.card-link:hover {
+  color: rgb(0, 157, 255); /* or any color you prefer */
+}
+.detail-container h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size:1.8rem;
+}
+
+
+/* Apply only on /places */
+.places-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+

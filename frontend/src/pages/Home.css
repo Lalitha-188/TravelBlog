@@ -1,0 +1,89 @@
+
+
+/* Background Image */
+.bg {
+  background-image: url('../assets/bg.jpg'); /* Adjust if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Layout container */
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333;
+}
+
+/* Title centered at top */
+.top-center {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.top-center h1 {
+  font-size: 5rem;
+  color: #213547;
+}
+
+.l.left {
+  flex: 1; /* Fills half the horizontal space in a flexbox layout */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: flex-start; /* Align text to the left */
+  height: 100%;
+}
+
+.left h5 {
+  font-size: 1.5rem;
+  margin-bottom: 9rem;
+  color: #444;
+  max-width: 60%; /* Allows text to wrap naturally */
+  line-height: 1.6;
+}
+
+.left button {
+  color: white;
+  background-color: #213547;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  top: -80px; /* move up */
+}
+
+
+.left button:hover {
+  background-color: #2c4860;
+}
+
+/* Image in bottom-right */
+.right {
+  position:absolute;
+  bottom: 7rem;
+  right: 6rem;
+   opacity: 0.9;
+   border-radius:0.8rem;
+  mix-blend-mode:darken
+
+}
+
+
+
+
+
