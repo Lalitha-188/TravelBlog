@@ -32,11 +32,11 @@ export default function DescriptionDetail() {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    minHeight: "100vh", // make sure it covers full screen
-    color: "#000" // adjust for contrast with background
+    minHeight: "100vh", 
+    color: "#000" 
   }}
 >
-    
+  
       <button 
         onClick={() => navigate(-1)} 
         style={{ 

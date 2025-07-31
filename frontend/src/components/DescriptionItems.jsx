@@ -48,15 +48,13 @@ const onDelete = async (id) => {
       },
     });
 
-    // Update main descriptions list
     setAllDescriptions((prev) =>
       prev.filter((description) => description._id !== id)
     );
 
-    // Update favorites list (if applicable)
     const updatedFavs = favItem.filter((description) => description._id !== id);
     localStorage.setItem("favorites", JSON.stringify(updatedFavs));
-    setFavItem(updatedFavs); // ✅ Assuming you're using useState for favItem
+    setFavItem(updatedFavs); 
 
     alert("Deleted successfully");
   } catch (err) {
@@ -67,8 +65,9 @@ const onDelete = async (id) => {
 return (
   <div
     style={{
-      backgroundColor: path ? 'lightblue' : 'unset', // ✅ 'unset' means no override
+      backgroundColor: path ? '' : 'unset', 
       minHeight: '100vh',
+      minWidth: '100vh',
       padding: '1rem'
     }}
   >

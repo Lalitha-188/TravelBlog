@@ -2,7 +2,6 @@ const Description=require("../models/description")
 const multer = require("multer")
 
 
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './public/images')
@@ -37,7 +36,7 @@ const getDescription = async (req, res) => {
 };
 
 const addDescription = async (req, res) => {
-  // ✅ Add these lines to debug the issue
+
   console.log("BODY:", req.body);
   console.log("FILE:", req.file);
   console.log("USER:", req.user);
@@ -105,7 +104,6 @@ const editDescription = async (req, res) => {
 };
 
 
-
 const deleteDescription = async (req, res) => {
   try {
     const description = await Description.findById(req.params.id);
@@ -113,7 +111,6 @@ const deleteDescription = async (req, res) => {
       return res.status(404).json({ message: "Description not found" });
     }
 
-    // Optional: Check if req.user._id === description.createdBy (for security)
 
     await Description.findByIdAndDelete(req.params.id);
     res.status(200).json({ message: "Description deleted successfully" });

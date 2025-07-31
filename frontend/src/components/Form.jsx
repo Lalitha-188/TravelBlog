@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default function Form({ onClose,onLoginSuccess }) { // <- receive onClose from parent
+export default function Form({ onClose,onLoginSuccess }) { 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
@@ -17,7 +17,6 @@ const handleOnSubmit = async (e) => {
       password,
     });
 
-    // Save token and user to localStorage
     localStorage.setItem("token", res.data.token);
     if (res.data.user) {
   localStorage.setItem("user", JSON.stringify(res.data.user));

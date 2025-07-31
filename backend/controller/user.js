@@ -21,13 +21,12 @@ const userSignUp = async (req, res) => {
   });
 
 const token = jwt.sign(
-  { _id: newUser._id, email: newUser.email }, // 👈 use _id
+  { _id: newUser._id, email: newUser.email }, 
   process.env.SECRET_KEY,
   { expiresIn: "1h" }
 );
 
 
-  // ✅ Return clean user object only
   return res.status(200).json({
     token,
     user: {
@@ -73,7 +72,6 @@ const getUser=async(req,res)=>{
  try {
     const id = req.params.id;
 
-    // Validate ID format (MongoDB ObjectId is 24 hex characters)
     if (!id.match(/^[0-9a-fA-F]{24}$/)) {
       return res.status(400).json({ msg: "Invalid user ID format" });
     }
@@ -84,7 +82,6 @@ const getUser=async(req,res)=>{
       return res.status(404).json({ msg: "User not found" });
     }
 
-    // Return only email (no password)
     res.status(200).json({ email: user.email });
   } catch (error) {
     console.error("getUser error:", error.message);

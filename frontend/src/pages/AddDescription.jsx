@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import travell from '../assets/travell.png'; // ✅ Correct import path
+import travell from '../assets/travell.png'; 
 
 export default function AddDescription() {
   const [descriptionData, setDescriptionData] = useState({});
@@ -28,7 +28,7 @@ const onHandleSubmit = async (e) => {
   const formData = new FormData();
   formData.append("title", descriptionData.title);
   formData.append("days", descriptionData.days);
-  formData.append("itenary", descriptionData.itenary.join(",")); // ✅ FIXED HERE
+  formData.append("itenary", descriptionData.itenary.join(",")); 
   formData.append("tales", descriptionData.tales);
   formData.append("file", descriptionData.file);
 

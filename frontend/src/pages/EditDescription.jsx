@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate,useParams } from 'react-router-dom';
-import travell from '../assets/travell.png'; // ✅ Correct import path
+import travell from '../assets/travell.png'; 
 
 export default function EditDescription() {
   const [descriptionData, setDescriptionData] = useState({});
@@ -40,7 +40,7 @@ const onHandleSubmit = async (e) => {
   const formData = new FormData();
   formData.append("title", descriptionData.title);
   formData.append("days", descriptionData.days);
-  formData.append("itenary", descriptionData.itenary.split(",").map(item => item.trim())); // ✅
+  formData.append("itenary", descriptionData.itenary.split(",").map(item => item.trim())); 
   formData.append("tales", descriptionData.tales);
   if (descriptionData.file instanceof File) {
     formData.append("file", descriptionData.file);

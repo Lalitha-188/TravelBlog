@@ -50,8 +50,8 @@ nav li .nav-link {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  white-space: nowrap;   /* Prevents text from wrapping */    /* Prevents overflow */
-  font-family: 'Poppins', sans-serif; /* or 'Montserrat', sans-serif */
+  white-space: nowrap;   
+  font-family: 'Poppins', sans-serif; 
 }
 
 li a{
@@ -95,13 +95,13 @@ section{
 
 
 .card {
-  flex: 0 0 calc(25% - 2rem);  /* ✅ 4 cards per row minus gap */
+  flex: 0 0 calc(25% - 2rem);  
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   text-align: center;
   border-radius: 8px;
   background-color: azure;
   padding: 2rem;
-  box-sizing: border-box;      /* ✅ Makes width include padding */
+  box-sizing: border-box;     
 }
 
 
@@ -157,7 +157,6 @@ section{
   width: 100%;
   max-width: 1000px;
   padding: 2rem;
-  /* background-color removed */
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -294,11 +293,11 @@ section{
   font-weight: bold;
 }
 .add-description-page {
-  background-image: url('travel.jpg'); /* ✅ adjust path */
+  background-image: url('travel.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; /* make it fill the screen */
+  min-height: 100vh; 
   padding: 2rem;
   opacity: calc();
 }
@@ -307,7 +306,7 @@ section{
   color: inherit;
 }
 .card-link:hover {
-  color: rgb(0, 157, 255); /* or any color you prefer */
+  color: rgb(0, 157, 255);
 }
 .detail-container h2 {
   text-align: center;
@@ -317,11 +316,12 @@ section{
 }
 
 
-/* Apply only on /places */
 .places-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  
 }
+
 

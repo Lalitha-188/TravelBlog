@@ -89,7 +89,7 @@ export default function Navbar() {
           console.warn("Login successful, but user data is missing!");
         }
       }}
-      onClose={() => setIsOpen(false)} // ✅ optional but recommended
+      onClose={() => setIsOpen(false)} 
     />
   </Modal>
 )}

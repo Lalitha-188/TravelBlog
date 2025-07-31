@@ -12,7 +12,7 @@ const verifyToken = require("../middleware/auth");
 
 router.get("/", getDescriptions);
 router.get("/:id", getDescription);
-router.post("/", verifyToken, upload.single("file"), addDescription); // ✅ this is fine
+router.post("/", verifyToken, upload.single("file"), addDescription); 
 router.put("/:id", verifyToken, upload.single("file"), editDescription);
 router.delete("/:id", deleteDescription);
 

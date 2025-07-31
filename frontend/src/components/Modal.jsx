@@ -1,5 +1,5 @@
 import React from 'react';
-import './Modal.css'; // Make sure you style it
+import './Modal.css'; 
 
 export default function Modal({ children, onClose }) {
   return (
